@@ -3,6 +3,46 @@
     <head>
         <title>Questions Creator</title>
         <link rel="stylesheet" type="text/css" href="main.css" />
+        <style>
+
+            .parent{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                overflow: auto;
+            }
+
+            body{
+                font-size: 22px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif
+            }
+
+            .center {
+                width: 250px;
+                height: 250px;
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                margin: -125px 0 0 -125px;
+
+            }
+
+            .output-container, .input-container{
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .output{
+                width: 400px;
+                height: 200px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+
+        </style>
+
         <script>
             function updateRightAnswerSelectOptions(){
 
