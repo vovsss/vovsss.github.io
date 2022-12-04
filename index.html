@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Questions Creator</title>
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        <script>
+            function updateRightAnswerSelectOptions(){
+
+
+
+                select = document.getElementById("q-right-answer");
+                var child = select.lastElementChild; 
+                while (child) {
+                    select.removeChild(child);
+                    child = select.lastElementChild;}
+                answersCount = document.getElementsByClassName("answer").length
+                for(var i = 0; i < answersCount; i++){
+                    var option = document.createElement("option");
+                    option.innerHTML = "" + i;
+                    select.appendChild(option);
+                }
+            }
+
+
+            function addTextArea() {
+                var textarea = document.createElement("textarea")
+                textarea.setAttribute("class", "answer")
+                var div = document.getElementsByClassName("answers")[0]
+                div.appendChild(textarea)
+                updateRightAnswerSelectOptions()
+
+            }
+            function removeTextArea(){
+                var areas = document.getElementsByClassName("answer")
+                if (areas.length == 1) {return}
+                var textarea = areas[areas.length-1]
+            
+                var div = document.getElementsByClassName("answers")[0]
+                div.removeChild(textarea)
+                updateRightAnswerSelectOptions()
+            }
+            function changeRightAnswerIndexVisibility(){
+                var value = document.getElementById("q-type").value
+                if (value != "keyboard"){
+                    list = document.getElementsByClassName("only-for-keyboard-type")
+                    for (var i = 0; i < list.length; i++) {
+                        list[i].style.display = "none";
+                    }
+                }
+            }
+            function getOutput(){
+                type = document.getElementById("q-type").value;
+                text = document.getElementById("q-text").value;
+                answers = document.getElementsByClassName("answer");
+                rightAnswer = document.getElementById("q-right-answer").value;
+
+                outputTextarea = document.getElementsByClassName("output")[0];
+
+                output = '{"type": "' + type + '", "text": "' + text + '", "answers": [';
+                
+                for(var i = 0; i < answers.length; i++){
+                    if(i != 0){
+                        output += ", ";
+                    }
+                    answer = answers[i];
+                    output += '"' + answer.value + '"';
+                }
+                output += "]";
+
+                if(type == "keyboard"){
+                    output += ', "right_answer": ' + rightAnswer;
+                }
+                output += "}";
+                outputTextarea.innerHTML = output;
+
+
+
+            }
+          </script>
+        </head>
+        
+        <body>
+            <div class="parent">
+                <div class="center">
+                    <div class="input-container">
+                        <h3 class="input-label">
+                            Текст вопроса
+                        </h3>
+                        <textarea class="input" id="q-text"></textarea>
+                        <h3 class="input-label">
+                            Тип вопроса
+                        </h3>
+                        <select id="q-type" onchange="changeRightAnswerIndexVisibility()">
+                            <option>keyboard</option>
+                            <option>simple</option>
+                            <option>accurate</option>
+                        </select>
+                        <h3 class = "input-label">
+                            Варианты ответов
+                        </h3>
+                        <div class="answers">
+                            <button onclick="removeTextArea()" class="remove-answer-button">-</button>
+                            <textarea class="answer"></textarea>
+                            <button onclick="addTextArea()" class="add-answer-button">+</button>
+                        </div>
+                        <div class="only-for-keyboard-type">
+                            <h3 class="input-label">Индекс правильного ответа</h3>
+                            <select id="q-right-answer"><option>0</option></select>
+                        </div>
+                
+                    </div>
+                    <button onclick="getOutput()">Рассчитать</button>
+                    <div class = "output-container">
+                        <h3>Вывод</h3>
+                        <textarea class="output">
+
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+        </body>
+</html>
