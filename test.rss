@@ -1,0 +1,287 @@
+<rss version="2.0">
+<channel>
+<title>OpenNews.opennet.ru: Общая лента новостей</title>
+<description>OpenNews - Новости мира открытых систем (Общая лента новостей)</description>
+<link>https://www.opennet.ru/opennews/</link>
+<item>
+<title>В Qt 6.5 появится API для прямого обращения к объектам Wayland</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58297</link>
+<pubDate>Sat, 30 Dec 2034 20:49:46 +0300</pubDate>
+<description>В Qt 6.5 для Wayland будет добавлен программный интерфейс QNativeInterface::QWaylandApplication для прямого обращения к родным для Wayland объектам, которые используются во внутренних структурах Qt, а также для получения доступа к информации о последних действия пользователя, которая может быть востребована для передачи расширениям протокола Wayland. Новый программный интерфейс реализован в пространстве имён QNativeInterface, в котором также предоставляются вызовы для доступны к родным API платформ X11 и Android. В будущем ожидается появление дополнительных интерфейсов QWaylandWindow для низкоуровневого доступа к окнам и QWaylandScreen для доступа к выводу на экран (wl_output), которые пока позиционируются как экспериментальные и скрыты в области QNativeInterface::Private.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58297</guid>
+</item>
+<item>
+<title>Кандидат в релизы Wine 8.0 и релиз vkd3d 1.6</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58296</link>
+<pubDate>Sat, 10 Dec 2022 11:07:48 +0300</pubDate>
+<description>Началось тестирование первого кандидата в релизы Wine 8.0, открытой реализации WinAPI. Кодовая база переведена на стадию заморозки перед релизом, который ожидается в середине января. По сравнению с выпуском Wine 7.22 закрыто 52 отчёта об ошибках и внесено 538 изменений.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58296</guid>
+</item>
+<item>
+<title>Открыт код исходной реализации языка PostScript</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58295</link>
+<pubDate>Sat, 10 Dec 2022 09:36:16 +0300</pubDate>
+<description>Музей компьютерной истории получил разрешение от компании Adobe на публикацию исходных текстов одной из первых реализаций технологии печати PostScript, выпущенной в 1984 году. Технология PostScript примечательна тем, что выводимая на печать страница описывается на специальном языке программирования и документ PostScript представляет собой программу, интерпретируемую при выводе на печать.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58295</guid>
+</item>
+<item>
+<title>Выпуск дистрибутива для исследования безопасности Kali Linux 2022.4</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58294</link>
+<pubDate>Fri, 09 Dec 2022 22:34:04 +0300</pubDate>
+<description>Представлен релиз дистрибутива Kali Linux 2022.4, созданного на основе Debian и предназначенного для тестирования систем на предмет наличия уязвимостей, проведения аудита, анализа остаточной информации и выявления последствий атак злоумышленников. Все оригинальные наработки, созданные в рамках дистрибутива, распространяются под лицензией GPL и доступны через публичный Git-репозиторий. Для загрузки подготовлены несколько вариантов iso-образов, размером 448 МБ, 2.7 ГБ и 3.8 ГБ. Сборки доступны для архитектур i386, x86_64, ARM (armhf и armel, Raspberry Pi, Banana Pi, ARM Chromebook, Odroid). По умолчанию предлагается рабочий стол Xfce, но опционально поддерживаются KDE, GNOME, MATE, LXDE и Enlightenment e17.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58294</guid>
+</item>
+<item>
+<title>Выпуск KDE Gear 22.12, набора приложений от проекта KDE </title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58292</link>
+<pubDate>Fri, 09 Dec 2022 16:40:15 +0300</pubDate>
+<description>Представлено декабрьское сводное обновление приложений (22.12), развиваемых проектом KDE. Напомним, что сводный набор приложений KDE c апреля 2021 года публикуется под именем KDE Gear, вместо KDE Apps и KDE Applications. Всего в рамках обновления опубликованы выпуски 234 программ, библиотек и плагинов. Информацию о наличии Live-сборок с новыми выпусками приложений можно получить на данной странице.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58292</guid>
+</item>
+<item>
+<title>Intel задействовал код DXVK в своих драйверах для Windows</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58287</link>
+<pubDate>Fri, 09 Dec 2022 09:45:27 +0300</pubDate>
+<description>Компания Intel начала тестирование значительного обновления Windows-драйверов Intel Arc Graphics Driver 31.0.101.3959 для видеокарт с GPU Arc (Alchemist) и Iris (DG1), а также для интегрированных GPU, поставляемых в процессорах на базе микроархитектуры Tiger Lake, Rocket Lake, Alder Lake и Raptor Lake. Наиболее существенные изменения в новой версии касаются работы по увеличению производительности игр, использующих DirectX 9. Предполагается, что оптимизации реализованы благодаря задействованию в драйвере кода от свободного проекта DXVK, предоставляющего прослойку с реализацией DXGI (DirectX Graphics Infrastructure), Direct3D 9, 10 и 11, работающую через трансляцию вызовов в API Vulkan.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58287</guid>
+</item>
+<item>
+<title>CERN и Fermilab переключаются на использование AlmaLinux</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58290</link>
+<pubDate>Fri, 29 Dec 2022 08:28:33 +0300</pubDate>
+<description>Европейский Центр ядерных исследований (CERN, Швейцария) и Национальная ускорительная лаборатория имени Энрико Ферми (Fermilab, США), в своё время разрабатывавшие дистрибутив Scientific Linux, но потом переключившиеся на использование CentOS, объявили о выборе AlmaLinux в качестве штатного дистрибутива для сопровождения экспериментов. Решение принято из-за изменения политики компании Red Hat в отношении сопровождения CentOS и преждевременного сворачивания поддержки ветки CentOS 8, выпуск обновлений для которой был прекращён в конце 2021 года, а не в 2029 году, как предполагали пользователи.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58290</guid>
+</item>
+<item>
+<title>Выпуск дистрибутива Deepin 20.8, развивающего собственное графическое окружение </title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58289</link>
+<pubDate>Thu, 08 Dec 2022 22:13:09 +0300</pubDate>
+<description>Опубликован релиз дистрибутива Deepin 20.8, основанного на пакетной базе Debian 10, но развивающего собственный рабочий стол Deepin Desktop Environment (DDE) и около 40 пользовательских приложений, среди которых музыкальный проигрыватель DMusic, видеоплеер DMovie, система обмена сообщениями DTalk, инсталлятор и центр установки программ Deepin Software Center. Проект основан группой разработчиков из Китая, но трансформировался в международный проект. Дистрибутив поддерживает русский язык. Все наработки распространяются под лицензией GPLv3. Размер загрузочного iso-образа 4 ГБ (amd64).</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58289</guid>
+</item>
+<item>
+<title>Релиз языка программирования PHP 8.2</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58288</link>
+<pubDate>Thu, 08 Dec 2022 18:56:15 +0300</pubDate>
+<description>После года разработки представлен релиз языка программирования PHP 8.2. Новая ветка включает серию новых возможностей, а также несколько изменений, нарушающих совместимость.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58288</guid>
+</item>
+<item>
+<title>Выпуск свободной системы 3D-моделирования Blender 3.4</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58286</link>
+<pubDate>Thu, 08 Dec 2022 11:42:42 +0300</pubDate>
+<description>Организация Blender Foundation представила выпуск свободного пакета 3D-моделирования Blender 3.4, подходящего для решения различных задач, связанных с 3D-моделированием, 3D-графикой, разработкой компьютерных игр, симуляцией, рендерингом, композитингом, трекингом движений, скульптурным моделированием, созданием анимации и монтажом видео. Код распространяется под лицензией GPL. Готовые сборки сформированы для Linux, Windows и macOS. Одновременно сформирован корректирующий выпуск Blender 3.3.2 в ветке с длительным сроком поддержки (LTS), обновления для которой будут формироваться до сентября 2024 года.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58286</guid>
+</item>
+<item>
+<title>Выпуск Tor Browser 12.0</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58284</link>
+<pubDate>Wed, 07 Dec 2022 21:21:29 +0300</pubDate>
+<description>Сформирован значительный релиз специализированного браузера Tor Browser 12.0, в котором осуществлён переход на ESR-ветку Firefox 102. Браузер сосредоточен на обеспечении анонимности, безопасности и приватности, весь трафик перенаправляется только через сеть Tor. Обратиться напрямую через штатное сетевое соединение текущей системы невозможно, что не позволяет отследить реальный IP-адрес пользователя (в случае взлома браузера, атакующие могут получить доступ к системным параметрам сети, поэтому для полного блокирования возможных утечек следует использовать такие продукты, как Whonix). Сборки Tor Browser подготовлены для Linux, Windows и macOS. Формирование новой версии для Android задерживается.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58284</guid>
+</item>
+<item>
+<title>Доступен Vieb 9.4, web-браузер в стиле редактора Vim</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58273</link>
+<pubDate>Wed, 07 Dec 2022 12:12:10 +0300</pubDate>
+<description>Опубликован web-браузер Vieb 9.4, оптимизированный для управления с клавиатуры, используя принципы работы и комбинации клавиш, свойственные для текстового редактора vim (например, для ввода текста в форме необходимо переходить в режим вставки). Код написан на языке JavaScript и распространяется под лицензией GPLv3. Интерфейс построен на базе платформ Electron, а в качестве web-движка задействован Chromium. Готовые сборки подготовлены для Linux (AppImage, snap, deb, rpm, pacman), Windows и macOS.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58273</guid>
+</item>
+<item>
+<title>Компания Tesla развивает криптографическую библиотеку liblithium</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58282</link>
+<pubDate>Wed, 07 Dec 2022 09:48:30 +0300</pubDate>
+<description>Компания Tesla Motors опубликовала криптографическую библиотеку liblithium, ключевыми целями создания которой являются компактность, низкое потребление ресурсов и переносимость. Библиотека изначально развивается с оглядкой на возможность выполнения как на обычных CPU, так и в DSP-чипах и микроконтроллерах, и подходит для использования в ограниченных окружениях и в коде, вызываемом на ранних стадиях загрузки для верификации цифровых подписей прошивок встраиваемых устройств. Код написан на языке Си (C99) и распространяется под лицензией Apache 2.0.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58282</guid>
+</item>
+<item>
+<title>Выпуск редактора векторной графики Inkscape 1.2.2</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58281</link>
+<pubDate>Wed, 07 Dec 2022 08:58:18 +0300</pubDate>
+<description>Доступно обновление свободного векторного графического редактора Inkscape 1.2.2. Редактор предоставляет гибкие инструменты для рисования и обеспечивает поддержку чтения и сохранения изображений в форматах SVG, OpenDocument Drawing, DXF, WMF, EMF, sk1, PDF, EPS, PostScript и PNG. Готовые сборки Inkscape подготовлены для Linux (AppImage, Snap, Flatpak), macOS и Windows.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58281</guid>
+</item>
+<item>
+<title>В Fedora Linux 38 начнут формироваться сборки на базе пользовательской оболочки Phosh</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58279</link>
+<pubDate>Tue, 06 Dec 2022 22:50:11 +0300</pubDate>
+<description>На заседании комитета FESCo (Fedora Engineering Steering Committee), отвечающего за техническую часть разработки дистрибутива Fedora Linux, утверждено предложение о начале формирования в Fedora Linux сборок для мобильных устройств, поставляемых с оболочкой Phosh. Оболочка Phosh основана на технологиях GNOME и библиотеке GTK, использует композитный сервер Phoc, работающий поверх Wayland, а также собственную экранную клавиатуру squeekboard. Окружение изначально развивалось компанией Purism в качестве аналога GNOME Shell для смартфона Librem 5, но затем вошло в число неофициальных проектов GNOME и теперь также используется в postmarketOS, Mobian и некоторых прошивках для устройств Pine64.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58279</guid>
+</item>
+<item>
+<title>Фронтэнд для языка Rust доведён до готовности к интеграции в GCC 13</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58278</link>
+<pubDate>Tue, 06 Dec 2022 21:01:42 +0300</pubDate>
+<description>Разработчики проекта gccrs (GCC Rust) опубликовали четвёртую редакцию патчей с реализацией фронтэнда компилятора языка Rust для GCC. Отмечается, что в новой редакции устранены почти все замечания, ранее высказанные при рецензировании предложенного кода, и патчи удовлетворяют всем техническим требованиям к коду, добавляемому в GCC. Рихард Бинер (Richard Biener), один из сопровождающих GCC, упомянул, что теперь код фронтэнда для языка Rust готов для интеграции в ветку GCC 13, релиз которой состоится в мае 2023 года.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58278</guid>
+</item>
+<item>
+<title>Компания Amazon присоединилась к инициативе по защите Linux от патентных претензий </title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58277</link>
+<pubDate>Tue, 06 Dec 2022 19:40:55 +0300</pubDate>
+<description>Компания Amazon вошла в число участников организации Open Invention Network (OIN), занимающейся защитой экосистемы Linux от патентных претензий. Вступлением в OIN компания продемонстрировала свою приверженность идеям по совместному развитию инновации и неагрессивному распоряжению патентами. Amazon считает Linux и открытое ПО ключевым фактором развития инноваций в компании. Отмечается, что целью присоединения Amazon к OIN является укрепление сообществ разработчиков открытого ПО и оказание помощи в том, чтобы такие технологии, как Linux, продолжали развиваться и оставаться доступными для всех.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58277</guid>
+</item>
+<item>
+<title>Релиз ftp-сервера ProFTPD 1.3.8</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58272</link>
+<pubDate>Tue, 06 Dec 2022 12:55:11 +0300</pubDate>
+<description>После двух с половиной лет разработки опубликован значительный выпуск ftp-сервера ProFTPD 1.3.8, сильными сторонами которого являются расширяемость и функциональность, а слабыми - периодическое выявление опасных уязвимостей. Одновременно доступен корректирующий выпуск ProFTPD 1.3.7f, который станет последним в серии ProFTPD 1.3.7.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58272</guid>
+</item>
+<item>
+<title>Выпуск дистрибутива Armbian 22.11. Разработка Orange Pi OS на базе Arch Linux</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58271</link>
+<pubDate>Tue, 06 Dec 2022 09:59:54 +0300</pubDate>
+<description>Опубликован выпуск Linux-дистрибутива Armbian 22.11, предоставляющего компактное системное окружение для различных одноплатных компьютеров на базе процессоров ARM, включая различные модели Raspberry Pi, Odroid, Orange Pi, Banana Pi, Helios64, pine64, Nanopi и Cubieboard на базе процессоров Allwinner, Amlogic, Actionsemi, Freescale / NXP, Marvell Armada, Rockchip, Radxa и Samsung Exynos.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58271</guid>
+</item>
+<item>
+<title>Выпуск FreeBSD 12.4</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58270</link>
+<pubDate>Tue, 06 Dec 2022 07:53:06 +0300</pubDate>
+<description>Представлен релиз FreeBSD 12.4. Установочные образы доступны для архитектур amd64, i386, powerpc, powerpc64, powerpcspe, sparc64 и armv6, armv7 и aarch64. Дополнительно подготовлены образы для систем виртуализации (QCOW2, VHD, VMDK, raw) и облачных окружений Amazon EC2. FreeBSD 12.4 станет последним обновлением ветки 12.x, сопровождение которой продлится до 31 декабря 2023 года. Весной будет подготовлено обновление FreeBSD 13.2, а на июль 2023 года запланирован выпуск FreeBSD 14.0.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58270</guid>
+</item>
+<item>
+<title>Создатель brew развивает новый пакетный менеджер tea</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58269</link>
+<pubDate>Mon, 05 Dec 2022 20:21:21 +0300</pubDate>
+<description>Макс Хауэлл (Max Howell), автор популярной на платформе macOS системы управления пакетами brew (Homebrew), развивает новый пакетный менеджер Tea, позиционируемый как продолжение развития brew, выходящее за рамки пакетного менеджера и предлагающее унифицированную инфраструктуру управления пакетами, работающую с децентрализованными репозиториями. Проект изначально развивается как многоплатформенный (в настоящее время поддерживаются macOS и Linux, в разработке поддержка Windows). Код проекта написан на языке TypeScript и распространяется под лицензией Apache 2.0 (brew был написан на Ruby и поставлялся под лицензией BSD).</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58269</guid>
+</item>
+<item>
+<title>Релиз PoCL 3.1 с независимой реализацией стандарта OpenCL</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58268</link>
+<pubDate>Mon, 05 Dec 2022 19:48:07 +0300</pubDate>
+<description>Представлен релиз проекта PoCL 3.1 (Portable Computing Language OpenCL), развивающего реализацию стандарта OpenCL, независимую от производителей графических ускорителей и позволяющую использовать различные бэкенды для выполнения OpenCL-ядер на разных типах графических и центральных процессоров. Код проекта распространяется под лицензией MIT. Поддерживается работа на платформах X86_64, MIPS32, ARM v7, AMD HSA APU, NVIDIA GPU и различных специализированных ASIP (Application-Specific Instruction-set Processor) и TTA-процессорах (Transport Triggered Architecture) c архитектурой VLIW.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58268</guid>
+</item>
+<item>
+<title>Выпуск FerretDB 0.7, реализации MongoDB на базе СУБД PostgreSQL</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58267</link>
+<pubDate>Mon, 05 Dec 2022 18:11:50 +0300</pubDate>
+<description>Опубликован выпуск проекта FerretDB 0.7, позволяющего заменить документо-ориентированную СУБД MongoDB на PostgreSQL без внесения изменений в код приложений. FerretDB реализован как прокси-сервер, транслирующий обращения к MongoDB в SQL-запросы к PostgreSQL, что позволяет использовать PostgreSQL в качестве фактического хранилища. Код написан на языке Go и распространяется под лицензией Apache 2.0.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58267</guid>
+</item>
+<item>
+<title>Релиз компилятора Rakudo 2022.12 для языка программирования Raku (бывший Perl 6) </title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58265</link>
+<pubDate>Mon, 05 Dec 2022 12:33:07 +0300</pubDate>
+<description>Представлен выпуск Rakudo 2022.12, компилятора для языка программирования Raku (бывший Perl 6). Проект был переименован из Perl 6 так как не стал продолжением Perl 5, как ожидалось изначально, а превратился в отдельный язык программирования, не совместимый с Perl 5 на уровне исходных текстов и развиваемый отдельным сообществом разработчиков. Компилятор поддерживает варианты языка Raku, описанные в спецификациях 6.c, 6.d (по умолчанию). Одновременно доступен выпуск виртуальной машины MoarVM 2022.12, формирующей среду для запуска скомпилированного в Rakudo байт-кода. В Rakudo компиляция также поддерживается для JVM и некоторых виртуальных машин для JavaScript.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58265</guid>
+</item>
+<item>
+<title>Уязвимости в VS Code, Grafana, GNU Emacs и Apache Fineract</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58264</link>
+<pubDate>Mon, 05 Dec 2022 11:23:01 +0300</pubDate>
+<description>Несколько недавно выявленных уязвимостей.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58264</guid>
+</item>
+<item>
+<title>Выпуск дистрибутива NomadBSD 131R-20221130</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58259</link>
+<pubDate>Mon, 05 Dec 2022 09:02:36 +0300</pubDate>
+<description>Доступен выпуск Live-дистрибутива NomadBSD 131R-20221130, представляющего собой редакцию FreeBSD, адаптированную для использования в качестве переносного рабочего стола, загружаемого с USB-накопителя. Графическое окружение основано на оконном менеджере Openbox. Для монтирования накопителей применяется DSBMD (поддерживается монтирование CD9660, FAT, HFS+, NTFS, Ext2/3/4). Размер загрузочного образа 2 ГБ (x86_64, i386).</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58259</guid>
+</item>
+<item>
+<title>Выпуск дистрибутива OpenIndiana 2022.10, продолжающего развитие OpenSolaris </title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58258</link>
+<pubDate>Sun, 04 Dec 2022 22:45:26 +0300</pubDate>
+<description>Опубликован релиз свободного дистрибутива OpenIndiana 2022.10, пришедшего на смену бинарному дистрибутиву OpenSolaris, развитие которого было прекращено компанией Oracle. OpenIndiana предоставляет пользователю рабочее окружение, построенное на базе свежего среза кодовой базы проекта Illumos. Непосредственно разработка технологий OpenSolaris продолжается проектом Illumos, в котором развивается ядро, сетевой стек, файловые системы, драйверы, а также базовый набор пользовательских системных утилит и библиотек. Для загрузки сформировано три вида iso-образов - серверная редакция с консольными приложениями (1 ГБ), минимальная сборка (435 МБ) и сборка с графическим окружением MATE (2 ГБ).</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58258</guid>
+</item>
+<item>
+<title>Хостинг свободных проектов Fosshost прекращает работу из-за недоступности директора</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58256</link>
+<pubDate>Sun, 04 Dec 2022 21:13:34 +0300</pubDate>
+<description>Участники проекта Fosshost, безвозмездно предоставляющего виртуальные серверы для свободных проектов, объявили о невозможности дальнейшего предоставления услуг и ожидании скорого отключения серверов компании. Проблемы в Fosshost вызваны тем, что Томас Марки (Thomas Markey), директор компании, уже более 6 месяцев не выходит на связь, а без него не удаётся уладить как финансовые, так и технические вопросы.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58256</guid>
+</item>
+<item>
+<title>Выпуск Cygwin 3.4.0, GNU-окружения для Windows </title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58257</link>
+<pubDate>Sun, 04 Dec 2022 19:40:04 +0300</pubDate>
+<description>Компания Red Hat опубликовала стабильный релиз пакета Cygwin 3.4.0, включающего DLL-библиотеку для эмуляции базового Linux API в Windows, позволяющую с минимальными изменениями собирать созданные для Linux программы. В пакет также входят непосредственно собранные для выполнения в Windows стандартные Unix-утилиты, серверные приложения, компиляторы, библиотеки и заголовочные файлы.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58257</guid>
+</item>
+<item>
+<title>Выпуск Live-дистрибутива Grml 2022.11</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58255</link>
+<pubDate>Sun, 04 Dec 2022 08:47:18 +0300</pubDate>
+<description>После более года разработки опубликован выпуск Live-дистрибутива grml 2022.11, основанного на пакетной базе Debian GNU/Linux. Дистрибутив содержит подборку программ для выполнения операций по обработке текстовых данных средствами пакета texttools и для выполнения работ, возникающих в практике системных администраторов (восстановление данных после сбоя, разбор инцидентов и т.д.). Графическое окружение построено с использованием оконного менеджера Fluxbox. Размер полного iso-образа 855 МБ, сокращённого - 492 МБ.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58255</guid>
+</item>
+<item>
+<title>Выпуск дистрибутива 4MLinux 41.0 </title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58254</link>
+<pubDate>Sun, 04 Dec 2022 08:34:24 +0300</pubDate>
+<description>Представлен выпуск 4MLinux 41.0, минималистичного пользовательского дистрибутива, не являющегося ответвлением от других проектов и использующего графическое окружение на базе JWM. 4MLinux может использоваться не только в качестве Live-окружения для воспроизведения мультимедийных файлов и решения пользовательских задач, но и в роли системы для восстановления после сбоев и платформы для запуска серверов LAMP (Linux, Apache, MariaDB и PHP). Для загрузки подготовлена два iso-образа (1.2 ГБ, x86_64) с графическим окружением и с подборкой программ для серверных систем.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58254</guid>
+</item>
+<item>
+<title>Выпуск OpenIKED 7.2, переносимой реализации протокола IKEv2 для IPsec</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58253</link>
+<pubDate>Sun, 04 Dec 2022 08:25:22 +0300</pubDate>
+<description>Проект OpenBSD представил выпуск OpenIKED 7.2, реализации протокола IKEv2, развиваемой проектом OpenBSD. Это четвёртый выпуск OpenIKED в форме отдельного проекта - изначально компоненты IKEv2 представляли собой неделимую часть IPsec-стека OpenBSD, но затем были выделены в отдельный переносимый пакет и теперь могут использоваться в других операционных системах. Работа OpenIKED проверена во FreeBSD, NetBSD, macOS и различных дистрибутивах Linux, включая Arch, Debian, Fedora и Ubuntu. Код написан на языке Си и распространяется под лицензией ISC.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58253</guid>
+</item>
+<item>
+<title>Релиз программы для обработки фотографий RawTherapee 5.9</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58252</link>
+<pubDate>Sat, 03 Dec 2022 21:27:37 +0300</pubDate>
+<description>После почти трёх лет разработки опубликован релиз программы RawTherapee 5.9, предоставляющей средства для редактирования фотографий и преобразования изображений в формате RAW. Программа поддерживает большое количество RAW-форматов файлов, в том числе, камер с датчиками Foveon- и X-Trans, а также может работать со стандартом Adobe DNG и с форматами JPEG, PNG и TIFF (до 32 бит на канал). Код проекта написан на языке C++ с использованием GTK+ и распространяется под лицензией GPLv3. Сборки подготовлены для Linux (AppImage) и Windows.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58252</guid>
+</item>
+<item>
+<title>Доступен PAPPL 1.3, фреймворк для организации вывода на печать</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58251</link>
+<pubDate>Sat, 03 Dec 2022 20:32:38 +0300</pubDate>
+<description>Майкл Свит (Michael R Sweet), автор системы печати CUPS, представил выпуск PAPPL 1.3, фреймворка для разработки приложений для печати на базе протокола IPP Everywhere, которые рекомендуется использовать вместо традиционных драйверов для принтеров. Код фреймворка написан на языке Си и распространяется под лицензией Apache 2.0 с исключением, разрешающим связывание с кодом под лицензиями GPLv2 и LGPLv2.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58251</guid>
+</item>
+<item>
+<title>Около 21% нового компилируемого кода в Android 13 написано на языке Rust</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58249</link>
+<pubDate>Sat, 03 Dec 2022 12:44:38 +0300</pubDate>
+<description>Инженеры из компании Google подвели первые итоги внедрения в платформу Android поддержки разработки на языке Rust. В Android 13 примерно 21% от добавленного нового компилируемого кода написано на Rust, а 79% на C/C++. В репозитории AOSP (Android Open Source Project), в котором развиваются исходные тексты платформы Android, насчитывается примерно 1.5 млн строк кода на Rust, связанного с такими новыми компонентам, как хранилище криптографических ключей Keystore2, стек для UWB-чипов (Ultra-Wideband), реализация протокола DNS-over-HTTP3, фреймворк виртуализации AVF (Android Virtualization Framework), экспериментальные стеки для Bluetooth и Wi-Fi.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58249</guid>
+</item>
+<item>
+<title>Сертификаты Samsung, LG и MediaTek использовались для заверения вредоносных Android-приложений</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58248</link>
+<pubDate>Sat, 03 Dec 2022 08:58:03 +0300</pubDate>
+<description>Компания Google раскрыла сведения об использовании сертификатов ряда производителей смартфонов для заверения цифровой подписью вредоносных приложений. Для создания цифровых подписей применялись сертификаты платформы, которыми производители заверяют привилегированные приложения, входящие в основной состав системных образов Android. Из производителей, c сертификатами которых связаны подписи вредоносных приложений, прослеживаются Samsung, LG и MediaTek. Источник утечки сертификатов пока не выявлен.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58248</guid>
+</item>
+<item>
+<title>Компания LG опубликовала платформу webOS Open Source Edition 2.19</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58247</link>
+<pubDate>Sat, 03 Dec 2022 08:05:30 +0300</pubDate>
+<description>Опубликован выпуск открытой платформы webOS Open Source Edition 2.19, которая может применяться на различных портативных устройствах, платах и автомобильных информационно-развлекательных системах. В качестве эталонной аппаратной платформы рассматриваются платы Raspberry Pi 4. Платформа развивается в публичном репозитории под лицензией Apache 2.0, а разработку курирует сообщество, придерживаясь совместной модели управления разработкой.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58247</guid>
+</item>
+<item>
+<title>Доступна мобильная платформа KDE Plasma Mobile 22.11</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58243</link>
+<pubDate>Fri, 02 Dec 2022 23:53:20 +0300</pubDate>
+<description>Опубликован выпуск мобильной платформы KDE Plasma Mobile 22.11, основанной на мобильной редакции рабочего стола Plasma 5, библиотеках KDE Frameworks 5, телефонном стеке ModemManager и коммуникационном фреймворке Telepathy. Для вывода графики в Plasma Mobile используется композитный сервер kwin_wayland, а для обработки звука применяется PulseAudio. Одновременно подготовлен выпуск набора мобильных приложений Plasma Mobile Gear 22.11, формируемого по аналогии с набором KDE Gear. Для создания интерфейса приложений применяется Qt, набор компонентов Mauikit и фреймворк Kirigami из состава KDE Frameworks, позволяющий создавать универсальные интерфейсы, пригодные для смартфонов, планшетов и ПК.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58243</guid>
+</item>
+<item>
+<title>Mozilla купила компанию Active Replica</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58246</link>
+<pubDate>Fri, 02 Dec 2022 22:14:04 +0300</pubDate>
+<description>Компания Mozilla продолжила покупку стартапов. Помимо вчерашнего объявления о поглощении Pulse также заявлено о покупке компании Active Replica, развивающей реализованную на базе web-технологий систему виртуальных миров для организации удалённых встреч людей. После завершения сделки, о подробностях которой не сообщается, сотрудники Active Replica присоединятся к работе команды Mozilla Hubs над созданием чатов с элементами виртуальной реальности.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58246</guid>
+</item>
+<item>
+<title>Выпуск Buttplug 6.2, открытой библиотеки для управления внешними устройствами (18+)</title>
+<link>https://www.opennet.ru/opennews/art.shtml?num=58244</link>
+<pubDate>Fri, 02 Dec 2022 18:14:24 +0300</pubDate>
+<description>Организация Nonpolynomial выпустила стабильную и готовую для широкого применения версию библиотеки Buttplug 6.2, которая может быть использована для управления разного типа устройствами с помощью геймпадов, клавиатур, джойстиков и VR-устройств. В числе прочего поддерживается синхронизация работы устройств с контентом, воспроизводимым в Firefox и VLC, и развиваются плагины для интеграции с игровыми движками Unity и Twine.</description>
+<guid>https://www.opennet.ru/opennews/art.shtml?num=58244</guid>
+</item>
+</channel>
+</rss>
