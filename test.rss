@@ -6,7 +6,7 @@
 <item>
 <title>В Qt 6.5 появится API для прямого обращения к объектам Wayland</title>
 <link>https://www.opennet.ru/opennews/art.shtml?num=58297</link>
-<pubDate>Sat, 30 Dec 2032 20:49:46 +0300</pubDate>
+<pubDate>Sat, 30 Dec 2034 20:49:46 +0300</pubDate>
 <description>В Qt 6.5 для Wayland будет добавлен программный интерфейс QNativeInterface::QWaylandApplication для прямого обращения к родным для Wayland объектам, которые используются во внутренних структурах Qt, а также для получения доступа к информации о последних действия пользователя, которая может быть востребована для передачи расширениям протокола Wayland. Новый программный интерфейс реализован в пространстве имён QNativeInterface, в котором также предоставляются вызовы для доступны к родным API платформ X11 и Android. В будущем ожидается появление дополнительных интерфейсов QWaylandWindow для низкоуровневого доступа к окнам и QWaylandScreen для доступа к выводу на экран (wl_output), которые пока позиционируются как экспериментальные и скрыты в области QNativeInterface::Private.</description>
 <guid>https://www.opennet.ru/opennews/art.shtml?num=58297</guid>
 </item>
