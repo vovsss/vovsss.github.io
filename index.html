@@ -35,7 +35,7 @@
                 align-items: center;
             }
             #icon {
-                max-width: 512px;
+                max-width: 120px;
                 border-radius: 10px;
                 margin-bottom: 20px;
             }
@@ -148,14 +148,14 @@
                     bridge.game.on('visibility_state_changed', state => sendMessageToUnity('OnVisibilityStateChanged', state))
 
                     let unityLoader = document.createElement('script')
-                    unityLoader.src = 'Build/TemplateData.loader.js'
+                    unityLoader.src = 'Build/Build.loader.js'
                     unityLoader.onload = () => {
                         createUnityInstance(
                             canvas,
                             {
-                                dataUrl: 'Build/TemplateData.data.unityweb',
-                                frameworkUrl: 'Build/TemplateData.framework.js.unityweb',
-                                codeUrl: 'Build/TemplateData.wasm.unityweb',
+                                dataUrl: 'Build/Build.data.unityweb',
+                                frameworkUrl: 'Build/Build.framework.js.unityweb',
+                                codeUrl: 'Build/Build.wasm.unityweb',
                                 streamingAssetsUrl: 'StreamingAssets',
                                 companyName: 'DefaultCompany',
                                 productName: 'ELEMENTary!',
