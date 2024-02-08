@@ -3,16 +3,30 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>ELEMENTary!</title>
+        <title>My project</title>
         <style>
             html, body {
                 width: 100%;
                 height: 100%;
                 padding: 0px;
                 margin: 0px;
+				            /* Убираем отступы */
+            padding: 0;
+            margin: 0;
+            /* Отключаем скролл и лонгтап на IOS */
+            overflow: hidden;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            /* Ставим высоту на 100% */
+            height: 100%;
             }
             .fullscreen {
-                background: #3559b7;
+                background: F0EEE5;
                 width: 100%;
                 height: 100%;
                 position: absolute;
@@ -24,7 +38,6 @@
                 bottom: 0px;
                 width: 100%;
                 height: 90px;
-                display: none;
             }
             #loading-overlay {
                 font-size: 20px;
@@ -44,20 +57,24 @@
                 width: 90%;
                 max-width: 250px;
                 height: 20px;
-                background: #3559b7;
+                background: #242424;
                 padding: 5px;
             }
             #progress-bar-fill {
                 border-radius: 3px;
                 width: 0%;
                 height: 100%;
-                background: #ffffff;
+                background: 00D9F1;
+        canvas:focus {
+            outline: none;
+        }
+
             }
         </style>
     </head>
     <body>
         <canvas id="canvas" class="fullscreen"></canvas>
-        <div id="banner-container"></div>
+        <div id="banner-container" style="display: none"></div>
         <div id="loading-overlay" class="fullscreen">
             <img id="icon" src="./icon.png" />
             <div id="progress-bar"><div id="progress-bar-fill"></div></div>
@@ -147,6 +164,10 @@
                     bridge.advertisement.on('rewarded_state_changed', state => sendMessageToUnity('OnRewardedStateChanged', state))
                     bridge.game.on('visibility_state_changed', state => sendMessageToUnity('OnVisibilityStateChanged', state))
 
+                    if (bridge.platform.id === bridge.PLATFORM_ID.YANDEX || bridge.platform.id === bridge.PLATFORM_ID.GAME_DISTRIBUTION) {
+                        bridge.advertisement.showInterstitial()
+                    }
+
                     let unityLoader = document.createElement('script')
                     unityLoader.src = 'Build/Build.loader.js'
                     unityLoader.onload = () => {
@@ -158,8 +179,8 @@
                                 codeUrl: 'Build/Build.wasm.unityweb',
                                 streamingAssetsUrl: 'StreamingAssets',
                                 companyName: 'DefaultCompany',
-                                productName: 'ELEMENTary!',
-                                productVersion: '0.1',
+                                productName: 'My project',
+                                productVersion: '1.0',
                                 // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
                                 // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
                             },
@@ -212,7 +233,6 @@
 
             // device
             window.getDeviceType = function() {
-            window.getDeviceType = function() {
                 return bridge.device.type
             }
 
@@ -251,8 +271,6 @@
             }
 
             window.authorizePlayer = function(options) {
-			
-			return 
                 if (options) {
                     options = JSON.parse(options)
                 }
@@ -352,6 +370,14 @@
 
 
             // advertisement
+            window.getInterstitialState = function() {
+                if (bridge.advertisement.interstitialState) {
+                    return bridge.advertisement.interstitialState
+                } else {
+                    return ''
+                }
+            }
+
             window.getIsBannerSupported = function() {
                 return bridge.advertisement.isBannerSupported.toString()
             }
@@ -361,7 +387,13 @@
             }
 
             window.setMinimumDelayBetweenInterstitial = function(options) {
-                bridge.advertisement.setMinimumDelayBetweenInterstitial(JSON.parse(options))
+                if (options) {
+                    options = JSON.parse(options)
+                } else {
+                    options = { }
+                }
+                
+                bridge.advertisement.setMinimumDelayBetweenInterstitial(options)
             }
 
             window.showBanner = function(options) {
@@ -617,6 +649,71 @@
                     })
                     .catch(error => {
                         sendMessageToUnity('OnLeaderboardShowNativePopupCompleted', 'false')
+                    })
+            }
+
+            window.getIsPaymentsSupported = function() {
+                return bridge.payments.isSupported.toString()
+            }
+
+            window.paymentsPurchase = function(purchaseId) {
+                bridge.payments.purchase(purchaseId)
+                    .then(() => {
+                        sendMessageToUnity('OnPaymentsPurchaseCompleted', 'true')
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnPaymentsPurchaseCompleted', 'false')
+                    })
+            }
+
+            window.paymentsConsumePurchase = function(purchaseToken) {
+                bridge.payments.consumePurchase(purchaseToken)
+                    .then(() => {
+                        sendMessageToUnity('OnPaymentsConsumePurchaseCompleted', 'true')
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnPaymentsConsumePurchaseCompleted', 'false')
+                    })
+            }
+
+            window.paymentsGetCatalog = function() {
+                bridge.payments.getCatalog()
+                    .then(data => {
+                        if (data) {
+                            if (typeof data !== 'string') {
+                                data = JSON.stringify(data)
+                            }
+
+                            data = data.replaceAll('imageURI', 'icon')
+
+                            sendMessageToUnity('OnPaymentsGetCatalogCompletedSuccess', data)
+                        } else {
+                            sendMessageToUnity('OnPaymentsGetCatalogCompletedSuccess', '')
+                        }
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnPaymentsGetCatalogCompletedFailed', 'false')
+                    })
+            }
+
+            window.paymentsGetPurchases = function() {
+                bridge.payments.getPurchases()
+                    .then(data => {
+                        if (data) {
+                            if (typeof data !== 'string') {
+                                data = JSON.stringify(data)
+                            }
+
+                            data = data.replaceAll('productID', 'id')
+                            data = data.replaceAll('purchaseToken', 'token')
+
+                            sendMessageToUnity('OnPaymentsGetPurchasesCompletedSuccess', data)
+                        } else {
+                            sendMessageToUnity('OnPaymentsGetPurchasesCompletedSuccess', '')
+                        }
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnPaymentsGetPurchasesCompletedFailed', 'false')
                     })
             }
         </script>
