@@ -168,6 +168,22 @@
                         bridge.advertisement.showInterstitial()
                     }
 
+		if(bridge.platform.id === bridge.PLATFIRM_ID.VK) {
+									let bannerOptions = {
+			    'vk': {
+			        position: 'top', // Необязательный параметр, по умолчанию = bottom
+			        layoutType: 'resize', // Необязательный параметр
+			        canClose: false // Необязательный параметр
+			    },
+			    'crazy_games': {
+			        containerId: 'div-container-id'
+			    },
+			    'game_distribution': {
+			        containerId: 'div-container-id'
+			    }
+			}
+			bridge.advertisement.showBanner(bannerOptions)
+		}
                     let unityLoader = document.createElement('script')
                     unityLoader.src = 'Build/Build.loader.js'
                     unityLoader.onload = () => {
