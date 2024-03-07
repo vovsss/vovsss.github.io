@@ -168,30 +168,15 @@
                         bridge.advertisement.showInterstitial()
                     }
 
-		if(bridge.platform.id === bridge.PLATFORM_ID.VK) {
-									let bannerOptions = {
-			    'vk': {
-			        position: 'bottom', // Необязательный параметр, по умолчанию = bottom
-
-			    },
-			    'crazy_games': {
-			        containerId: 'div-container-id'
-			    },
-			    'game_distribution': {
-			        containerId: 'div-container-id'
-			    }
-			}
-			bridge.advertisement.showBanner(bannerOptions)
-		}
                     let unityLoader = document.createElement('script')
-                    unityLoader.src = 'Build/Build.loader.js'
+                    unityLoader.src = 'Build/NewBuild3.loader.js'
                     unityLoader.onload = () => {
                         createUnityInstance(
                             canvas,
                             {
-                                dataUrl: 'Build/Build.data.unityweb',
-                                frameworkUrl: 'Build/Build.framework.js.unityweb',
-                                codeUrl: 'Build/Build.wasm.unityweb',
+                                dataUrl: 'Build/NewBuild3.data.unityweb',
+                                frameworkUrl: 'Build/NewBuild3.framework.js.unityweb',
+                                codeUrl: 'Build/NewBuild3.wasm.unityweb',
                                 streamingAssetsUrl: 'StreamingAssets',
                                 companyName: 'DefaultCompany',
                                 productName: 'My project',
